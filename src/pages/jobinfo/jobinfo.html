@@ -1,0 +1,32 @@
+<!--
+  Generated template for the JobinfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Job Information</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close" showWhen="android, windows" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="data">
+      <ion-card>
+        <ion-card-header>
+          {{data.jobtitle}}
+        </ion-card-header>
+        <ion-card-content>
+          Content here
+        </ion-card-content>
+      </ion-card>
+  </div>
+</ion-content>

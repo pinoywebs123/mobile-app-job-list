@@ -1,3 +1,15 @@
 page-home {
 
 }
+
+page-home ion-content{
+    background: #2980b9 !important;
+}
+page-home ion-content ion-item {
+    background: transparent !important;
+    color: #fff !important;
+}
+
+page-home ion-content ion-card {
+    background: #ecf0f1 !important;
+}

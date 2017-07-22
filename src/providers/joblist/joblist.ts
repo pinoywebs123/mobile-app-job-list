@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { ModalController } from 'ionic-angular';
+import { JobinfoPage } from '../../pages/jobinfo/jobinfo';
+
 
 /*
   Generated class for the JoblistProvider provider.
@@ -13,14 +16,19 @@ export class JoblistProvider {
   url: string;
   key : string;
   url2 : string;
-  constructor(public http: Http) {
+  constructor(public http: Http, public modalCtrl: ModalController) {
     this.key = '9945025717887439';
     this.url = 'http://localhost:8100/api/apisearch?publisher='+this.key+'&q=';
     this.url2 = '&co=ph&start=0&limit=25&format=json&v=2';
+    
   }
 
   getList(search){
     return this.http.get(this.url+search+this.url2).map(res=> res.json());
+  }
+  viewJob(job){
+    let modal = this.modalCtrl.create(JobinfoPage, job);
+    modal.present();
   }
 
 }

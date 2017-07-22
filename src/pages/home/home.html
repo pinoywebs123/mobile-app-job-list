@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title text-center>Pinoy Job List</ion-title>
+  <ion-navbar color="primary">
+    <ion-title text-center>Morls Joblist App</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,14 +14,18 @@
       <ion-list *ngFor="let job of jobs">
         <ion-card>
         <ion-card-header>
-         {{job.jobtitle}}
-         <p> {{job.company}} - {{job.city}}</p>
+         <p>{{job.jobtitle}}</p>
+         <p> {{job.company}} - <strong>{{job.city}}</strong></p>
          
         </ion-card-header>
         <ion-card-content>
-          {{job.snippet}}
+         
 
           <p>@{{job.formattedRelativeTime}}</p>
+          <ion-item>
+            <button ion-button color="danger" round >Apply Now</button>
+            <button ion-button color="primary" round (click)="clickJob(job)">View More</button>
+          </ion-item>
         </ion-card-content>
         
       </ion-card>

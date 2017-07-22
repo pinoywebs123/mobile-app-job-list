@@ -10,5 +10,6 @@ export class AboutPage {
   constructor(public navCtrl: NavController) {
 
   }
+  
 
 }
