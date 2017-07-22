@@ -23,7 +23,8 @@
 
           <p>@{{job.formattedRelativeTime}}</p>
           <ion-item>
-            <button ion-button color="danger" round >Apply Now</button>
+            <a href="{{job.url}}"><button ion-button color="danger" round >Apply Now</button></a>
+            
             <button ion-button color="primary" round (click)="clickJob(job)">View More</button>
           </ion-item>
         </ion-card-content>
